@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React /* , {Fragment} */ from "react"
+import Header from "./Header"
+import Main from "./Main"
+import Footer from "./Footer"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <Header titulo="Mi Pagina"/>
+            <Main/>
+            <Footer/>
+        </>
+    )
 }
 
-export default App;
+/* class App extends React.Component {
+
+    
+    render(){
+        return (
+            <>
+            <p>Hola Mundo</p>
+            <p>Otro Texto</p>
+            </>
+            )
+        }
+        
+    constructor(){
+
+    }
+}
+ */
+//CommonJS
+//module.exports = App
+
+//ES6
+export default App

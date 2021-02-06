@@ -1,0 +1,55 @@
+https://reactjs.org/blog/2020/08/10/react-v17-rc.html
+https://babeljs.io/docs/en/editors/
+https://cmder.net/
+http://es6-features.org/
+
+
+Dynamic Imports
+
+
+
+function App(a){
+
+}
+
+
+App(1,2,3)
+<App uno="1" dos="2" />
+
+
+
+const arr = [1,2,3]
+
+const [uno,dos,tres] = arr 
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+
+
+const obj = {x:1,y:2,z:3}
+
+const {x:x,y:y,z:z} = obj
+
+//Object Shorthand
+
+const {x,y,z} = obj
+
+
+const x = obj.x
+const y = obj.y
+const z = obj.z
+
+
+mount
+    constructor
+    render
+    componentDidMount
+
+update
+    shouldComponentUpdate
+    render
+    
+unmount
+    componentWillUnmount
