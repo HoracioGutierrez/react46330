@@ -2,6 +2,7 @@ https://reactjs.org/blog/2020/08/10/react-v17-rc.html
 https://babeljs.io/docs/en/editors/
 https://cmder.net/
 http://es6-features.org/
+https://reactrouter.com/web/guides/quick-start
 
 
 Dynamic Imports
@@ -53,3 +54,61 @@ update
     
 unmount
     componentWillUnmount
+
+
+
+const arr = [1,2,3]
+
+const resultado = arr.forEach((elemento,indice)=>{
+    
+})
+
+const resultado = arr.map((elemento,indice)=>{
+    return 
+})
+
+
+
+OPERADOR REST/SPREAD (...)
+
+REST 
+
+function foo(...parametros){
+    console.log(parametros) //[1,2,3]
+}
+
+foo(1,2,3)
+
+
+SPREAD
+
+const arr = [1,2,3]
+const obj = {x:1,y:2,z:3}
+
+const copia = [...arr]
+
+const copia = {...obj}
+
+
+const arr = [1,2,3]
+
+arr.filter((elemento)=>{
+    
+    elemento > 1 ? true : false
+    
+    if(elemento>1){
+        return true
+    }else{
+        return false
+    }
+
+})
+
+
+REACT-ROUTER-DOM
+
+
+BrowserRouter : API History
+HashRouter : location.hash
+MemoryRouter : Todas las apps que no corrar en navegador (Nativo , Desktop)
+StaticRouter : SSR (Server Side Rendering)

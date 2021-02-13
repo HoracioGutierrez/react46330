@@ -1,17 +1,14 @@
 import React from 'react'
 import Nav from "./Nav"
+import {NavLink} from "react-router-dom"
 
-const Header = ({titulo}) => {
-
-    //const {titulo} = props
-    //const {titulo:titulo} = props
-    //console.log(props.titulo)
-    //const titulo = props.titulo
-
+const Header = ({titulo,links}) => {
     return (
         <header>
-            <h1>{titulo}</h1>
-            <Nav/>
+            <NavLink to="/" exact>
+                <h1>{titulo}</h1>
+            </NavLink>
+            <Nav links={links}/>
         </header>
     )
 }

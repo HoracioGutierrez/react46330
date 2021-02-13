@@ -1,11 +1,11 @@
 import React from 'react'
 import Nav from './Nav'
 
-const Footer = () => {
+const Footer = ({links}) => {
     return (
         <footer>
             <p>&copy; Copyright 2021</p>
-            <Nav/>
+            <Nav links={links}/>
         </footer>
     )
 }
