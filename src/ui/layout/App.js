@@ -2,8 +2,7 @@ import React from "react"
 import Header from "./Header"
 import Main from "./Main"
 import Footer from "./Footer"
-import Contador from "./Contador"
-import Usuarios from "./Usuarios"
+
 
 class App extends React.Component {
 
@@ -39,15 +38,6 @@ class App extends React.Component {
 
     agregarUsuario = (e) => {
         e.preventDefault()
-
-        /* const copia = this.state.usuarios.slice(0)
-        copia.push(this.state.valor) */
-
-        /* const copia = [...this.state.usuarios]
-        copia.push(this.state.valor) */
-
-        //const copia = [...this.state.usuarios,this.state.valor]
-
         this.setState({
             usuarios : [
                 ...this.state.usuarios,
@@ -76,20 +66,16 @@ class App extends React.Component {
 
     render(){
 
-        const {titulo,links,contador,valor,usuarios} = this.state
+        const {titulo,links,valor,usuarios,contador} = this.state
 
         return (
             <>
                 <Header titulo={titulo} links={links}/>
-
-                {/* <Usuarios valor={valor} usuarios={usuarios} agregarUsuario={this.agregarUsuario} manejarCambio={this.manejarCambio} borrarUsuario={this.borrarUsuario}/>
-
-                <Contador contador={contador} aumentarContador={this.aumentarContador} resetearContador={this.resetearContador} restarContador={this.restarContador}/> */}
-                
-                <Main/>
+                <Main valor={valor} usuarios={usuarios} agregarUsuario={this.agregarUsuario} manejarCambio={this.manejarCambio} borrarUsuario={this.borrarUsuario} contador={contador} aumentarContador={this.aumentarContador} resetearContador={this.resetearContador} restarContador={this.restarContador}/>
                 <Footer links={links}/>
             </>
         )
+        
     }
         
 }

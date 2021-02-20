@@ -9,16 +9,43 @@
 <body>
 <button>click</button>
 <script>
+"use strict"
 
-const hacerClick = (a) => {
-    console.log(a)
-}
+/* 
+const obj = {}
+obj.x = 1 
+*/
 
-const btn = document.querySelector("button")
 
-btn.addEventListener("click",()=>{
-    hacerClick(1)
+//Cada propiedad tiene atributos [[atributo]]
+const obj = {}
+
+//value
+//writable
+//configurable
+//enumerable
+Object.defineProperty(obj,"x",{
+    value : 1,
+    writable : false, //escritura
+    configurable : false, //borrado
+    enumerable : false //iterabilidad
 })
+
+//obj.x = 2
+//delete obj.x
+
+
+/* 
+Object.preventExtensions(obj)
+Object.seal()
+Object.freeze()
+ */
+
+/* 
+ function foo(a,a,c){
+
+ } 
+ */
 
 </script>
 </body>

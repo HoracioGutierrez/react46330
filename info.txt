@@ -112,3 +112,67 @@ BrowserRouter : API History
 HashRouter : location.hash
 MemoryRouter : Todas las apps que no corrar en navegador (Nativo , Desktop)
 StaticRouter : SSR (Server Side Rendering)
+
+
+
+
+src/
+    |_index.js
+    |_api/
+    |_ui/
+        |_layout/
+            |_App.js
+            |_Header.js
+            |_Footer.js
+            |_Main.js
+        |_paginas/
+            |_Home.js
+            |_Contacto.js
+            |_Clientes.js
+            |_Productos.js
+        |_componentes/
+            |_Usuarios.js
+            |_Contador.js
+            |_Nav.js
+
+
+CODE SPLITTING / DYNAMIC IMPORTS
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+
+
+
+
+PUB/SUB
+
+LIBRERIA(State Manager)
+flux - redux
+
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?utm_source=chrome-ntp-icon
+
+
+REDUX - REACT-REDUX
+
+IMPLEMENTACION DE REDUX
+store 
+reducer
+actions
+
+
+IMPLEMENTACION DE REACT-REDUX
+Provider
+connect
+
+
+
+
+
+Context API + HOOKS
+
+
+useState
+useReducer
+useContext
+useMemo
+useCallback
+useEffect

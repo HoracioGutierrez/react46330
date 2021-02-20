@@ -1,7 +1,5 @@
 import React from "react"
 
-//State Uplifting
-
 const Contador = ({contador,aumentarContador,resetearContador,restarContador}) => {
     return(
         <>
