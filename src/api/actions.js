@@ -1,24 +1,23 @@
-const aumentarContador = () => {
-    //Aca hago cosas probablemente
-    return {type:"CONTADOR_AUMENTAR"}
-}
+export const aumentarContador = () => ({type:"CONTADOR_AUMENTAR"})
 
-const resetearContador = () => {
-    return {type:"CONTADOR_RESETEAR"}
-}
+export const resetearContador = () => ({type:"CONTADOR_RESETEAR"})
 
-const restarContador = () => {
-    return {type:"CONTADOR_RESTAR"}
-}
+export const restarContador = () => ({type:"CONTADOR_RESTAR"})
 
-const agregarUsuario = () => {
-    return {type:"USUARIO_AGREGAR"}
-}
+export const agregarUsuario = valor => ({type:"USUARIO_AGREGAR",valor})
 
-const manejarCambio = () => {
-    return {type:"VALOR_CAMBIAR"}
-}
+export const manejarCambio = valor => ({type:"VALOR_CAMBIAR",valor:valor})
 
-const borrarUsuario = () => {
-    return {type:"USUARIO_BORRAR"}
-}
+export const borrarUsuario = id => ({type:"USUARIO_BORRAR",id})
+
+export const pedirUsuariosSuccess = usuarios => ({type:"USUARIOS_PEDIR_SUCCESS",usuarios})
+
+export const pedirUsuariosPending = () => ({type:"USUARIOS_PEDIR_PENDING"})
+
+export const pedirUsuariosError = err => ({type:"USUARIOS_PEDIR_ERROR",err}) 
+
+export const pedirDetalleProductoPending = () => ({type:"USUARIO_DETALLE_PENDING"})
+
+export const pedirDetalleProductoSuccess = () => ({type:"USUARIO_DETALLE_SUCCESS"})
+
+export const pedirDetalleProductoError = () => ({type:"USUARIO_DETALLE_ERROR"})

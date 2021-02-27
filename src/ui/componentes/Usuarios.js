@@ -1,10 +1,23 @@
 import React from "react"
+import {connect} from "react-redux"
+import {agregarUsuario,manejarCambio,borrarUsuario} from "../../api/actions"
 
 const Usuarios = ({valor,usuarios,manejarCambio,agregarUsuario,borrarUsuario}) => {
+
+    const manejarSubmit = e => {
+        e.preventDefault()
+        agregarUsuario(valor)
+    }
+
+    const handleChange = (e) => {
+        const valor = e.target.value
+        manejarCambio(valor)
+    }
+
     return (
         <>
-            <form onSubmit={agregarUsuario}>
-                <input type="text" onChange={manejarCambio} value={valor}/>
+            <form onSubmit={manejarSubmit}>
+                <input type="text" onChange={handleChange} value={valor}/>
                 <button>Agregar</button>
             </form>
 
@@ -22,4 +35,7 @@ const Usuarios = ({valor,usuarios,manejarCambio,agregarUsuario,borrarUsuario}) =
     )
 }
 
-export default Usuarios
+export default connect(
+    ({usuarios,valor})=>({valor,usuarios}),
+    {agregarUsuario,manejarCambio,borrarUsuario}
+)(Usuarios)

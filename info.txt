@@ -162,7 +162,7 @@ actions
 IMPLEMENTACION DE REACT-REDUX
 Provider
 connect
-
+HOOKS
 
 
 
@@ -176,3 +176,10 @@ useContext
 useMemo
 useCallback
 useEffect
+
+
+
+https://marketplace.visualstudio.com/items?itemName=patbenatar.advanced-new-file
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost
+

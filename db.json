@@ -1,0 +1,28 @@
+{
+    "productos" : [
+        {
+            "id" : 1,
+            "titulo" : "Monitor 24",
+            "descripcion" : "lorem ipsum",
+            "precio" : 24000,
+            "stock" : 100
+        },
+        {
+            "id" : 2,
+            "titulo" : "Auriculares Bluetooth",
+            "descripcion" : "lorem ipsum",
+            "precio" : 5000,
+            "stock" : 150
+        },
+        {
+            "id" : 3,
+            "titulo" : "Notebook i7 16gb ram",
+            "descripcion" : "lorem ipsum",
+            "precio" : 150000,
+            "stock" : 50
+        }
+    ],
+    "usuarios" : [
+
+    ]
+}

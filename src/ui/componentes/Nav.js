@@ -1,5 +1,6 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
+import {connect} from "react-redux"
 
 const Nav = ({links}) => {
     return (
@@ -7,7 +8,7 @@ const Nav = ({links}) => {
             {
                 links.map((link)=>{
                     return (
-                        <NavLink key={link} to={link}>{link}</NavLink>
+                        <NavLink key={link} to={`/${link}`}>{link}</NavLink>
                     )
                 })
             }
@@ -15,4 +16,6 @@ const Nav = ({links}) => {
     )
 }
 
-export default Nav
+export default connect(
+    ({ links }) => ({ links })
+)(Nav)

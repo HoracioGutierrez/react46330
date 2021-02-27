@@ -1,11 +1,11 @@
 import React from 'react'
 import Usuarios from "../componentes/Usuarios"
 
-const Clientes = ({valor,usuarios,agregarUsuario,manejarCambio,borrarUsuario}) => {
+const Clientes = () => {
     return (
         <div>
             <h2>Usuarios</h2>
-            <Usuarios valor={valor} usuarios={usuarios} agregarUsuario={agregarUsuario} manejarCambio={manejarCambio} borrarUsuario={borrarUsuario}/>
+            <Usuarios/>
         </div>
     )
 }

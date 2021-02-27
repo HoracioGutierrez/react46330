@@ -4,9 +4,10 @@ import Home from '../paginas/Home'
 import Clientes from '../paginas/Clientes'
 import Contacto from '../paginas/Contacto'
 import Productos from '../paginas/Productos'
+import Producto from "../paginas/Producto"
 
 
-const Main = ({valor,usuarios,contador,aumentarContador,resetearContador,restarContador,agregarUsuario,manejarCambio,borrarUsuario}) => {
+const Main = () => {
     return (
         <main>
 
@@ -16,12 +17,14 @@ const Main = ({valor,usuarios,contador,aumentarContador,resetearContador,restarC
                 </Route>
 
                 <Route path="/usuarios">
-                    <Clientes valor={valor} usuarios={usuarios} agregarUsuario={agregarUsuario} manejarCambio={manejarCambio} borrarUsuario={borrarUsuario}/>
+                    <Clientes/>
                 </Route>
 
-                <Route path="/productos">
-                    <Productos contador={contador} aumentarContador={aumentarContador} resetearContador={resetearContador} restarContador={restarContador}/>
+                <Route path="/productos" exact>
+                    <Productos/>
                 </Route>
+
+                <Route path="/productos/:id" component={Producto}/>
 
                 <Route path="/contacto">
                     <Contacto/>
