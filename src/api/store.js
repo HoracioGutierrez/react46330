@@ -5,4 +5,6 @@ const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.
 
 //const store = createStore(combineReducers({Usuarios}))
 
+//console.log(store.getState())
+
 export default store

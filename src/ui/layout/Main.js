@@ -5,6 +5,7 @@ import Clientes from '../paginas/Clientes'
 import Contacto from '../paginas/Contacto'
 import Productos from '../paginas/Productos'
 import Producto from "../paginas/Producto"
+import { RutaPrivada } from '../componentes/RutasCustomizadas'
 
 
 const Main = () => {
@@ -20,9 +21,10 @@ const Main = () => {
                     <Clientes/>
                 </Route>
 
-                <Route path="/productos" exact>
+                {/* <Route path="/productos" exact>
                     <Productos/>
-                </Route>
+                </Route> */}
+                <RutaPrivada valida={false} path="/productos" component={Productos}/>
 
                 <Route path="/productos/:id" component={Producto}/>
 

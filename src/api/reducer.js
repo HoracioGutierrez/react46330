@@ -9,12 +9,113 @@ const storeInicial = {
         current : [],
         error : ""
     },
+    producto : {
+        pending : false,
+        current : {},
+        error : ""
+    },
+    producto_nuevo : {
+        titulo : "",
+        precio : 0,
+        descripcion : "",
+        stock : 1,
+        pending : false
+    },
+    usuario : {
+        username : "",
+        password : "",
+        logged : false
+    }
 }
 
 const reducer = (storeAnterior,action) => {
     switch(action.type){
 
-        case "USUARIOS_PEDIR_ERROR" : 
+        case "USUARIO_LOGIN" : 
+            return  {
+                ...storeAnterior,
+                usuario : {
+                    ...storeAnterior.usuario,
+                    logged : true
+                }
+            }
+
+        case "USUARIO_CAMBIA" : 
+            return {
+                ...storeAnterior,
+                usuario : {
+                    ...storeAnterior.usuario,
+                    [action.target] : action.valor
+                }
+            }
+
+        case "PRODUCTO_NUEVO_AGREGAR_PENDING" : 
+            return {
+                ...storeAnterior,
+                producto_nuevo : {
+                    ...storeAnterior.producto_nuevo,
+                    pending : true
+                }
+            }
+
+        case "PRODUCTO_NUEVO_CAMBIO" : 
+            return {
+                ...storeAnterior,
+                producto_nuevo : {
+                    ...storeAnterior.producto_nuevo,
+                    /* pending : false, */
+                    [action.target] : action.valor
+                }
+            }
+        
+        case "PRODUCTO_NUEVO_AGREGAR_SUCCESS" : 
+            return {
+                ...storeAnterior,
+                producto_nuevo : {
+                    ...storeAnterior.producto_nuevo,
+                    pending : false
+                },
+                productos : {
+                    ...storeAnterior.productos,
+                    current : [
+                        ...storeAnterior.productos.current,
+                        {
+                            ...action.nuevoProducto
+                        }
+                    ]
+                }
+            }
+
+        case "PRODUCTO_DETALLE_PENDING" :
+            return {
+                ...storeAnterior,
+                producto : {
+                    ...storeAnterior.producto,
+                    pending : true
+                }
+            }
+
+        case "PRODUCTO_DETALLE_SUCCESS" :
+            return {
+                ...storeAnterior,
+                producto : {
+                    ...storeAnterior.producto,
+                    pending : false,
+                    current : action.producto
+                }
+            }
+
+        case "PRODUCTO_DETALLE_ERROR" :
+            return {
+                ...storeAnterior,
+                producto : {
+                    ...storeAnterior.producto,
+                    pending : false,
+                    error : action.error
+                }
+            }
+
+        case "PRODUCTOS_PEDIR_ERROR" : 
             return {
                 ...storeAnterior,
                 productos : {
@@ -24,7 +125,7 @@ const reducer = (storeAnterior,action) => {
                 }
             }
 
-        case "USUARIOS_PEDIR_PENDING" : 
+        case "PRODUCTOS_PEDIR_PENDING" : 
             return {
                 ...storeAnterior,
                 productos : {
@@ -33,12 +134,12 @@ const reducer = (storeAnterior,action) => {
                 }
             }
 
-        case "USUARIOS_PEDIR_SUCCESS" : 
+        case "PRODUCTOS_PEDIR_SUCCESS" : 
             return {
                 ...storeAnterior,
                 productos : {
                     ...storeAnterior.productos,
-                    current : action.usuarios,
+                    current : action.productos,
                     pending : false
                 }
             }
